@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <title>Donation Form</title>
+    <!-- Linking the CSS File with HTML File -->
+    <link rel="stylesheet" type="text/css" href="css/donation_form_style.css">
+    <body>
+        <!-- &nbsp; has been used to give extra spaces between texts -->
+        <p><span style="color: red;">*</span> &nbsp; - Denotes Required Information</p>
+        <p>> 1 Donation &nbsp; > 2 Confirmation &nbsp; > 3 Thank You</p>
+        <!-- Form Tag Starts from here to make a form in HTML -->
+        <form>
+            <!-- Fieldset defies an area where some form elements can remain gathered -->
+            <fieldset>
+                <!-- Legend defies the name of that area specified by the Field set -->
+                <legend><b>Donor Information</b></legend>
+                <label>First Name <span style="color: red;">*</span></label>
+                <input type="name" id="fname" name="fname" value=""><br><br>
+                <label>Last Name <span style="color: red;">*</span></label>
+                <input type="name" id="lname" name="lname" value=""><br><br>
+                <label>Company</label>
+                <input type="name" id="cname" name="cname" value=""><br><br>
+                <label>Address 1 <span style="color: red;">*</span></label>
+                <input type="name" id="ad1" name="ad1" value=""><br><br>
+                <label>Address 2 </label>
+                <input type="name" id="ad2" name="ad2" value=""><br><br>
+                <label>City <span style="color: red;">*</span></label>
+                <input type="name" id="city" name="city" value=""><br><br>
+                <label>State <span style="color: red;">*</span></label>
+                <select name="state">
+                    <option value="Dhaka">Dhaka</option>
+                    <option value="Chittagong">Chittagong</option>
+                    <option value="Jessore">Jessore</option>
+                </select><br><br>
+                <label>Zip Code <span style="color: red;">*</span></label>
+                <input type="name" id="zcode" name="zcode" value=""><br><br>
+                <label>Country <span style="color: red;">*</span></label>
+                <select name="country">
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Germany">Germany</option>
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                </select><br><br>
+                <label>Phone</label>
+                <input type="name" id="phone" name="phone" value=""><br><br>
+                <label>Fax</label>
+                <input type="name" id="fax" name="fax" value=""><br><br>
+                <label>Email <span style="color: red;">*</span></label>
+                <input type="name" id="email" name="email" value=""><br><br>
+                <label>Donation Amount <span style="color: red;">*</span></label>
+                <input type="radio" id="zero" name="amount" value="0" checked>
+                <label>None</label>
+                <input type="radio" id="fifty" name="amount" value="50">
+                <label>$50</label>
+                <input type="radio" id="sevenfive" name="amount" value="75">
+                <label>$75</label>
+                <input type="radio" id="hundred" name="amount" value="100">
+                <label>$100</label><br>&nbsp;&nbsp;
+                <input type="radio" id="twofifty" name="amount" value="250">
+                <label>$250</label>
+                <input type="radio" id="other" name="amount" value="">
+                <label>Other</label><br>
+                <p>(Check a button or type in your amount)</p><br>
+                <label>Other Amount</label>
+                <input type="Number" id="number" name="amount"><br><br>
+                <label>Recurring Donation</label>
+                <input type="checkbox" id="donation" name="donate">I am interested in giving on regular basis<br><br>
+                <label>Monthly Credit Card</label>
+                <input type="number" id="cc" name="ccnumber">
+                <label>For </label>
+                <input type="number" id="mn" name="months">
+                <label>Months</label>
+            </fieldset>
+            <fieldset>
+                <legend><b>Honorarium and Memorial Donation Information</b></legend>
+                <label>I would like to make this donation</label>
+                <input type="radio" id="tohonour" name="dtype" value="To Honor">
+                <label>To Honor</label>
+                <input type="radio" id="inmemory" name="dtype" value="In Memory Of">
+                <label>In Memory Of</label><br><br>
+                <label>Name</label>
+                <input type="name" id="name" name="fullname" value=""><br><br>
+                <label>Acknowledge Donation To</label>
+                <input type="name" id="adt" name="adt" value=""><br><br>
+                <label>Address</label>
+                <input type="name" id="ad" name="ad" value=""><br><br>
+                <label>City</label>
+                <input type="name" id="ct" name="ct" value=""><br><br>
+                <label>State</label>
+                <select name="state">
+                    <option value="Dhaka">Dhaka</option>
+                    <option value="Chittagong">Chittagong</option>
+                    <option value="Jessore">Jessore</option>
+                </select><br><br>
+                <label>Zip</label>
+                <input type="name" id="zc" name="zc" value=""><br><br>
+            </fieldset>
+            <fieldset>
+                <legend><b>Additional Information</b></legend>
+                <p>Please Enter your name, company or organization as you would like to appear it in our publications</p><br>
+                <!-- CSS Classes has been used to specify some styles for specific form elements -->
+                <label class="f2">Name</label>
+                <input type="name" id="name" name="name" value=""><br><br>
+                <input type="checkbox" id="gift" name="gift">&nbsp; I would like my gift to remain anonymous<br>
+                <input type="checkbox" id="offer" name="offer">&nbsp; My Employer offers a matching gift program, I will mail the matching gift form<br>
+                <input type="checkbox" id="savecost" name="savecost">&nbsp; Please save the cost of acknowledgement this gift by not mailing a thank you letter<br><br>
+                <label class="f2">Comments<br>(Please type any question or feedback here)</label><br>
+                <textarea name="comments" rows="5" cols="15"></textarea><br><br>
+                <label>How May We Contact You?</label><br><br>
+                <input type="checkbox" id="email" name="email">Email<br><br>
+                <input type="checkbox" id="postalmail" name="postalmail">Postal Mail<br><br>
+                <input type="checkbox" id="telephone" name="telephone">Telephone<br><br>
+                <input type="checkbox" id="fax" name="fax">Fax<br><br>
+                <p class="cc">I would like to receive newsletters and information about special event by :  </p>
+                <input type="checkbox" id="postalmail" name="pmail">Postal Mail<br><br>
+                <input type="checkbox" id="email" name="mail">Email<br><br>
+                <input type="checkbox" id="like" name="like">I would like information about volunteering with the <br><br>
+                <input type="name" id="info" name="info" value="" size="200"><br><br>
+                <input type="reset" value="Reset">
+                <input type="submit" value="Continue"><br>
+                <p><img src="images/lock.png" alt="lock icon" height="20px" width="20px">&nbsp; Donate online with confidence. You are on a secured server</p>
+                <p>If you have any problems or questions, Please contact <span style="color: gray;">support</span></p>
+            </fieldset>
+        </form>
+    </body>
+</html>

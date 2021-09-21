@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(233, 235, 240);
+    font-family: Arial;
+}
+
+legend{
+    color: rgb(230, 26, 26);
+}
+
+label{
+    width: 250px;
+    display: inline-block;
+}
+
+.f2{
+    width: 200px;
+    display: inline;
+}
+
+.e2{
+    width: 250px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.cc{
+    color: gray;
+    font-family: Bahnschrift;
+}
+
+input[type="submit"]{
+    padding:15px;
+    border: 2px ;
+    background-color: gray;
+    align-items: center;
+    color: rgb(24, 230, 75);
+    border-radius: 50px;
+}
+
+input[type="reset"]{
+    padding:15px;
+    border: 2px ;
+    background-color: gray;
+    color: rgb(24, 230, 75);
+    border-radius: 50px;
+}
