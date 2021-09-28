@@ -1,0 +1,71 @@
+body {
+    font-family: Londrina Regular;
+    background-color: white;
+    background-image: url(../images/reg1.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+fieldset {
+    border-color: royalblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.red {
+    color: red;
+}
+
+#heading {
+    color: rgb(41, 41, 194);
+    font-family: Londrina Solid;
+    font-size: 40px;
+}
+
+input[type="submit"] {
+    padding: 25px;
+    border: 2px;
+    background-color: #4364F7;
+    align-items: center;
+    color: rgb(225, 222, 236);
+    border-radius: 50px;
+    font-family: Londrina Solid;
+    width: 200px;
+    font-size: 20px;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+input[type="radio"]:hover {
+    cursor: pointer;
+}
+
+input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
+.f {
+    font-size: 14px;
+    padding: 5px;
+    width: 500px;
+    line-height: 1.8;
+    margin: 0 auto;
+}
+
+.removeBorders {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    border-color: white;
+    -webkit-appearance: none;
+    border-width: 0px;
+    size: 2px;
+}
+
+.lcolors {
+    color: black;
+    font-family: Londrina Solid;
+}
