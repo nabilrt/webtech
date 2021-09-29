@@ -36,12 +36,13 @@
             $emailError = "Email is required";
         } else {
             $Email = validateInput($_POST["email"]);
+            if (!filter_var($Email, FILTER_VALIDATE_EMAIL)) {
+                $emailError = "Invalid Email Format Type it correctly";
+            }
         }
-        if (!filter_var($Email, FILTER_VALIDATE_EMAIL)) {
-            $emailError = "Invalid Email Format Type it correctly";
-        }
+        
         if ((empty($_POST["day"])) or (empty($_POST["month"])) or (empty($_POST["year"]))) {
-            $dobError = "Enter all the fields";
+            $dobError = "Enter all the fields";   
         }
         if (($dobday >= 1 and $dobday <= 31) and ($dobmonth >= 1 and $dobmonth <= 12) and ($dobyear >= 1953 and $dobyear <= 1998)) {
             $DoB = strval($dobday) . "-" . strval($dobmonth) . "-" . strval($dobyear);
