@@ -28,8 +28,14 @@
             $nameError = "Name is required";
         } else {
             $Name = validateInput($_POST["name"]);
-            if ((!preg_match("/^[a-zA-Z-'._ ]*$/", $Name)) or (str_word_count($name_words) < 2)) {
-                $nameError = "Only letters and white space allowed and minimum two words needed";
+            if ((!preg_match("/^[a-zA-Z-'._ ]*$/", $Name))) {
+                $nameError = "Name Must Start with a letter";
+            }
+            else{
+                $Name = validateInput($_POST["name"]);
+                if((str_word_count($name_words) < 2)){
+                $nameError="Minimum Two Words Needed";
+                }
             }
         }
         if (empty($_POST["email"])) {
@@ -39,17 +45,16 @@
             if (!filter_var($Email, FILTER_VALIDATE_EMAIL)) {
                 $emailError = "Invalid Email Format Type it correctly";
             }
-        }
-        
+        }        
         if ((empty($_POST["day"])) or (empty($_POST["month"])) or (empty($_POST["year"]))) {
             $dobError = "Enter all the fields";   
+        }else{
+            if (($dobday >= 1 and $dobday <= 31) and ($dobmonth >= 1 and $dobmonth <= 12) and ($dobyear >= 1953 and $dobyear <= 1998)) {
+                $DoB = strval($dobday) . "-" . strval($dobmonth) . "-" . strval($dobyear);
+            } else {
+                $dobError = "Invalid Date Entered [dd - (1-31) mm - (1-12) yy - (1953-1998)]";
+            }
         }
-        if (($dobday >= 1 and $dobday <= 31) and ($dobmonth >= 1 and $dobmonth <= 12) and ($dobyear >= 1953 and $dobyear <= 1998)) {
-            $DoB = strval($dobday) . "-" . strval($dobmonth) . "-" . strval($dobyear);
-        } else {
-            $dobError = "Invalid Date Entered [dd - (1-31) mm - (1-12) yy - (1953-1998)]";
-        }
-
         if (empty($_POST["gender"])) {
             $genderError = "Gender Required";
         } else {
