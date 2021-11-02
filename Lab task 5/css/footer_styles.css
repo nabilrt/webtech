@@ -1,0 +1,10 @@
+.divstyles{
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    text-align: center;
+    border: 2px solid rosybrown;
+}
