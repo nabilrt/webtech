@@ -23,7 +23,7 @@ class addHouseOwner{
                 $this-> error["nameErr"] = "The name must have start with litter";
               } else {
                   if (preg_match('/^[A-Za-z\s._-]+$/', $data["Name"]) !== 1) {
-                    $this-> error["nameErr"] = "Name can contain letter,desh,dot and space";
+                    $this-> error["nameErr"] = "Name can contain letter,dash,dot and space";
                   }
               }
           }
@@ -34,6 +34,9 @@ class addHouseOwner{
       } else {
           if (!filter_var($data["Email"], FILTER_VALIDATE_EMAIL)) {
             $this-> error["emailErr"] = "Invalid email format";
+          }
+          if(checkEmail($data)){
+            $this-> error["emailErr"] = "Email Already Exists";
           }
       }
 
@@ -70,7 +73,9 @@ class addHouseOwner{
           if (!is_numeric($data["NID"])) {
             $this-> error["nidErr"] = "NID Must only consists of number";
           }
-
+          if(checkNID($data)){
+            $this-> error["nidErr"] = "NID Already Exists";
+          }
       }
   
       if (empty($data["Gender"])){

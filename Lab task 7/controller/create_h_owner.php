@@ -24,7 +24,7 @@ class addHouseOwner
           $this->error["nameErr"] = "The name must have start with litter";
         } else {
           if (preg_match('/^[A-Za-z\s._-]+$/', $data["Name"]) !== 1) {
-            $this->error["nameErr"] = "Name can contain letter,desh,dot and space";
+            $this->error["nameErr"] = "Name can contain letter,dash,dot and space";
           }
         }
       }

@@ -41,7 +41,42 @@ function checkLogin($data){
        }else{
             return false;
        }
-    }
+}
+
+function checkEmail($data){
+    $isFound=false;
+    $data_s = file_get_contents("../json/owners.json");  
+    $data_s = json_decode($data_s, true); 
+        foreach($data_s as $row){
+            if($row["Email"]==$data["Email"]){
+            $isFound=true;
+            break;
+            }
+        }
+        if($isFound){
+           return true;
+       }else{
+            return false;
+       }
+}
+
+function checkNID($data){
+    $isFound=false;
+    $data_s = file_get_contents("../json/owners.json");  
+    $data_s = json_decode($data_s, true); 
+        foreach($data_s as $row){
+            if($row["NID"]==$data["NID"]){
+            $isFound=true;
+            break;
+            }
+        }
+        if($isFound){
+           return true;
+       }else{
+            return false;
+       }
+}
+
 
     function getUserInfo($data){
         $isset=false;

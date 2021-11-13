@@ -1,7 +1,5 @@
 <?php
 include 'db_connect.php';
-error_reporting(0);
-session_start();
 function addHouseOwners($data)
 {
     $conn = db_conn();
@@ -40,11 +38,8 @@ function checkLogin($data)
     $conn = null;
 
     if (!empty($row)) {
-        $_SESSION["NID"] = $data["NID"];
         return true;
-    } else {
-        return false;
-    }
+    } 
 }
 
 function checkEmail($data)
@@ -101,15 +96,7 @@ function getUserInfo($data)
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     $conn = null;
     if (!empty($row)) {
-        $_SESSION['FullName'] = $row['Name'];
-        $_SESSION['Email'] = $row['Email'];
-        $_SESSION['Image'] = $row['Image'];
-        $_SESSION['Gender'] = $row['Gender'];
-        $_SESSION['Password'] = $row['Password'];
-        $_SESSION['NID'] = $row['NID'];
-        return true;
-    } else {
-        return false;
+        return $row;
     }
 }
 
@@ -126,10 +113,6 @@ function editUserInfo($data)
     } catch (PDOException $e) {
         echo "Update " . $e->getMessage();
     }
-    $_SESSION["FullName"] = $data["Name"];
-    $_SESSION["Email"] = $data["Email"];
-    $_SESSION["Gender"] = $data["Gender"];
-    $_SESSION["Password"] = $data["Password"];
     $isUpdated = true;
     $conn = null;
     if ($isUpdated) {
@@ -262,14 +245,6 @@ function fetchAd($ad_id)
     }
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    $_SESSION["AD_Rent"] = $row["AD_Rent"];
-    $_SESSION["AD_Area"] = $row["AD_Area"];
-    $_SESSION["AD_Address"] = $row["AD_Address"];
-    $_SESSION["AD_Description"] = $row["AD_des"];
-    $_SESSION["Picture1"] = $row["Picture1"];
-    $_SESSION["Picture2"] = $row["Picture2"];
-    $_SESSION["Picture3"] = $row["Picture3"];
-
     return $row;
 }
 
@@ -316,4 +291,3 @@ function searchUser($id)
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $rows;
 }
-?>
