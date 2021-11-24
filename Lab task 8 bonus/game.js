@@ -36,6 +36,7 @@ function results(){
 
     var a=question[54];
 
+
     if(document.getElementById("easy").checked==true){
         if(r.length==x && (r.includes(y)|| r.includes(y.toUpperCase()))){
         
