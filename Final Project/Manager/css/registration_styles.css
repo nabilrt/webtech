@@ -1,0 +1,18 @@
+body {
+
+  background-image: linear-gradient(rgba(255, 249, 249, 0.89), rgba(240, 231, 231, 0.884)), url(../images/bg3.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.bd{
+
+  background-image: linear-gradient(rgba(255, 249, 249, 0.89), rgba(240, 231, 231, 0.884)), url(../images/bg3.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+
+

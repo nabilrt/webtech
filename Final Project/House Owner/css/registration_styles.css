@@ -1,0 +1,36 @@
+body {
+
+  background-image: linear-gradient(rgba(255, 249, 249, 0.89), rgba(240, 231, 231, 0.884)), url(../images/bg3.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.bd{
+
+  background-image: linear-gradient(rgba(255, 249, 249, 0.89), rgba(240, 231, 231, 0.884)), url(../images/bg3.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+div{
+  padding-left:10px;
+}
+
+
+
+.button1 {
+  background-color: #1b6be2;
+  border: 3px solid royalblue;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 1px 2px;
+  cursor: pointer;
+  width: 9%;
+}
+

@@ -1,0 +1,39 @@
+/* Applying an background image to body and sizing and positioning it in a webpage */
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+.bd{
+  font-family: 'Slabo 27px', serif;
+  background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: #000;
+}
+
+.intro {
+  position: fixed;
+  bottom: 420px;
+  right: 10px;
+}
+
+.intro2 {
+  position: fixed;
+  bottom: 490px;
+  right: 15px;
+}
+
+
+
+/* For the searchbar in the search page */
+
+
+hr {
+  color: blue;
+}
+
+table {
+  border: 2px solid blue;
+}
+
+.divclass{
+  display: inline;
+}

@@ -1,0 +1,26 @@
+[
+{
+   "Dev": 1,
+   "Name": "Abidur Rahman Nabil",
+   "Description": "I am Nabil studying in 7th semester in AIUB CS Department.I love programming a little bit and listening to music.",
+   "Image": "../images/nabil.jpg"
+  },
+ {
+  "Dev": 2,
+  "Name": "Arpita Datta",
+  "Description": "I am Arpita. I am currently studying in AIUB in 7th semester in the Computer Science Department. I love studying and hangouts.",
+  "Image": "../images/arpita.jpg"
+ },
+ {
+  "Dev": 3,
+  "Name": "Zarif Amir Sanad",
+  "Description": "Hello I am Zarif Amir. I am a CS Department student in AIUB and i am in the 7th semester. I love gaming and singing.",
+  "Image": "../images/sanad.jpg"
+ },
+ {
+  "Dev":4,
+  "Name": "Ashraful Islam Adhir",
+  "Description": "Hi, my name is Adhir. I am from AIUB CS Department and i am currently studying in 7th semester. I love bike riding.",
+  "Image": "../images/adhir.jpg"
+ }
+]
